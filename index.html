@@ -1,25 +1,97 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body{
-                background-color: #f9f9f9;
-            }
-            .sidebar{
-                width: 10%;
-                float: left;
-            }
-            .main{
-                width: 90%;
-                float: left;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="sidebar">
-            <img src="./logo.PNG"/>
+
+<head>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .sidebar {
+            width: 10%;
+            float: left;
+            z-index: 1;
+            height: 100%;
+        }
+
+        .main {
+            width: 90%;
+            float: left;
+        }
+
+        .side_btn {
+            padding: 40px;
+            padding-left: 50px;
+            border: 0;
+            background-color: transparent;
+        }
+
+        .title {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #f4f5f7;
+            margin: 50px;
+            padding: 50px;
+        }
+
+        p {
+            font-size: medium;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .in {
+            width: 800px;
+            margin: 30px;
+            height: 40px;
+            border-radius: 15px;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="./aine/logo.PNG" style="padding: 10px;" />
+        <button class="side_btn" onclick="Students()">
+            <img src="./aine/user.png" />
+        </button>
+        <button class="side_btn" onclick="Lessons()">
+            <img src="./aine/book.png" />
+        </button>
+        <button class="side_btn" onclick="Setting()">
+            <img src="./aine/setting.png" />
+        </button>
+    </div>
+    <div class="main">
+        <h1 class="title">AINE</h1>
+        <div class="content" id="content">
+            <p>
+                We are deep tech company, developing technology products which are inherently enabled with artificial
+                intelligence.
+            </p>
+            <p>
+                With our APIs and customizable hosted products, we allow legacy and developing software to make use of
+                AI modules readily available in market.
+            </p>
+
         </div>
-        <div class="main">bye</div>
-    </body>
+    </div>
+
+    <script>
+        function Students() {
+            document.getElementById("content").innerHTML = "Page under construction";
+        }
+        function Lessons() {
+            document.getElementById("content").innerHTML = " <h2>Videos</h2 ><center><input class='in' placeholder='Insert URL here'/><p>or</p></center><div style='width:100px;height:50px;padding:40px;margin:20px;margin-left:200px;background-color:white'><center><b>upload</b></center><div>";
+        }
+        function Setting() {
+            document.getElementById("content").innerHTML = "Page under construction";
+        }
+    </script>
+</body>
 
 </html>
